@@ -2,8 +2,10 @@ import java.util.Random;
 
 public class Tester {
 
-    public Tester (SortingAlgorithm sa){
+    private SortingAlgorithm algor;
 
+    public Tester (SortingAlgorithm sa){
+        algor= sa;
     }
 
     public double singleTest(int size){
@@ -33,6 +35,6 @@ public class Tester {
 
         double average = sum/iterations;
         System.out.println("Sorted "+ size+" elements in "+ average+ " ms(average)");
-        
+
     }
 }

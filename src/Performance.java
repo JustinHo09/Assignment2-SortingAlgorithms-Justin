@@ -1,6 +1,6 @@
 public class Performance {
 
-    public void main(){
+    public static void main(String[] args){
 
         int [] sizes = {100,500,1000,2000,5000,10000,20000,75000,150000};
         int iterate = 20;

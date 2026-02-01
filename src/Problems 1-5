@@ -92,3 +92,8 @@ Problem 2 Insertion Sort: List: [-21, 5, 7, -10, 61, 8, 3, 10]
           The list is fully sorted.
 
 Problem 3 Quicksort: List: [-5, 4, 2, 619, 11, 5, 620, -3]
+
+
+
+
+Problem 4 Shell Sort: List: [5, 10, 60, 0, -1, 34, 6, 10]

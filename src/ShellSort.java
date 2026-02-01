@@ -13,6 +13,20 @@ public class ShellSort implements SortingAlgorithm{
     }
 
     public void sortInterleave(int[] input, int start, int gap){
-        
+
+        int temp;
+        for(int j = start+gap; j< input.length; j= j+ gap){
+
+            for(int k=j; k>=gap; k=k-gap){
+
+                if(input[k-gap] > input[k]){
+                    temp = input[k-gap];
+                    input[k-gap] = input[k];
+                    input[k] = temp;
+                }else{
+                    break;
+                }
+            }
+        }
     }
 }

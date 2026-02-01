@@ -21,7 +21,7 @@ public class Tester {
         // ADD THE SORTING METHOD CALL HERE
         long end_time = System.nanoTime();
 
-        time = (end_time - start_time)/1000000;
+        time = (end_time - start_time)/1000000.0;
 
         return time;
     }

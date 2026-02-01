@@ -1,2 +1,6 @@
-public class ShellSort {
+public class ShellSort implements SortingAlgorithm{
+
+    int[] sorty(int[] input){
+        
+    }
 }

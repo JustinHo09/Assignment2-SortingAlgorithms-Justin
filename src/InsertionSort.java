@@ -10,6 +10,8 @@ public class InsertionSort implements SortingAlgorithm{
                     temp = input[j-1];
                     input[j-1] = input[j];
                     input[j] = temp;
+                }else{
+                    break;
                 }
             }
         }

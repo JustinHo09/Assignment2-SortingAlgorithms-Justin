@@ -4,3 +4,68 @@ Problem 1 Merge Sort: List1: [1, 2, 3, 6], List2:[-3, 0, 6, 7], and List3: [] (s
 
 
 
+
+Problem 2 Insertion Sort: List: [-21, 5, 7, -10, 61, 8, 3, 10]
+
+                          Assume value at index 0, -21, is already sorted.
+                          Compare 5 and -21, 5 is greater than -21 so no swap is done.
+                          Since no swap is done and we assume -21 is sorted than that means
+                          -21 and 5 are in sorted order.
+          After first iteration: List: [-21, 5, 7, -10, 61, 8, 3, 10].
+
+
+                          Compare 7 and 5, 7 is greater than 5 so no swap is done.
+                          Since we know -21 and 5 are in sorted order and that 7 does
+                          not get swapped with 5, we know it is also in sorted order
+                          compared to -21 and 5, which is why is is not compared to -21.
+          After second iteration: List [-21, 5, 7, -10, 61, 8, 3, 10].
+
+                          Compare -10 and 7, -10 is less than 7 so swap -10 and 7.
+                          After that the list is: [-21, 5, -10, 7, 61, 8, 3, 10].
+
+                          Compare -10 and 5, -10 is less than 5 so swap -10 and 5.
+                          After than the list is: [-21, -10, 5, 7, 61, 8, 3, 10].
+
+                          Compare -10 and -21, -10 is greater than -21 so no swap is done.
+                          Since -21 is already in sorted position and -10 does not swap with it
+                          -10 is now in ordered position.
+          After third iteration: List [-21, -10, 5, 7, 61, 8, 3, 10]
+
+                          Compare 61 and 7, 61 is greater than 7 so no swap is done.
+                          Since 7 is already in ordered position compared to the previous elements
+                          and no swaps are done with 61, that means 61 is also in ordered position.
+          After fourth iteration: List [-21, -10, 5, 7, 61, 8, 3, 10]
+
+                          Compare 8 and 61, 8 is less than 61 so swap 8 and 61.
+                          After that the list is: [-21, -10, 5, 7, 8, 61, 3, 10].
+
+                          Compare 8 and 7, 8 is greater than 7 so no swap is done.
+                          Since 7 is already in ordered position compared to the previous elements
+                          and no swap is done with 8, that means 8 is in ordered position.
+          After fifth iteration: List [-21, -10, 5, 7, 8, 61, 3, 10]
+
+                          Compare 3 and 61, 3 is less than 61 so swap 3 and 61.
+                          After that the list is: [-21, -10, 5, 7, 8, 3, 61, 10]
+
+                          Compare 3 and 8, 3 is less than 8 so swap 3 and 8.
+                          After that the list is: [-21, -10, 5, 7, 3, 8, 61, 10]
+
+                          Compare 3 and 7, 3 is less than 7 so swap 3 and 7.
+                          After that the list is: [-21, -10, 5, 3, 7, 8, 61, 10].
+
+                          Compare 3 and 5, 3 is less than 5 so swap 3 and 5.
+                          After that the list is: [-21, -10, 3, 5, 7, 8, 61, 10].
+
+                          Compare 3 and -10, 3 is greater than -10 so no swap is done.
+                          Since -10 is already in ordered position compared to the previous
+                          elements, 3 is also now in ordered position.
+          After sixth iteration: List [-21, -10, 3, 5, 7, 8, 61, 10].
+
+                          Compare 10 and 61, 10 is less than 61, so swap 10 and 61.
+                          After that the list is: [-21, -10, 3, 5, 7, 8, 10, 61]
+
+                          Compare 10 and 8, 10 is greater than 8 so no swap.
+                          Since 8 is already in ordered position compared to the previous elements
+                          that means 10 is now also in ordered position.
+          After seventh iteration: List [-21, -10, 3, 5, 7, 8, 10, 61]
+          The list is fully sorted.

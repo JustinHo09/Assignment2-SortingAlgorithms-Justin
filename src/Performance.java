@@ -17,7 +17,12 @@ public class Performance {
         System.out.println("Sorting algorithm - Bubble sort");
         testing= new Tester(bubble);
         for(int i=0; i<sizes.length; i++){
-            testing.test(iterate,sizes[i]);
+            if(sizes[i] <= 75000) {
+                testing.test(iterate, sizes[i]);
+            }else{
+                System.out.println("Sorting "+ sizes[i]+" elements takes too long(Tens of minutes" +
+                        " per iteration at least)");
+            }
         }
 
         System.out.println();

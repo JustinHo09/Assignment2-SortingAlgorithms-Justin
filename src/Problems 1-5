@@ -97,3 +97,67 @@ Problem 3 Quicksort: List: [-5, 4, 2, 619, 11, 5, 620, -3]
 
 
 Problem 4 Shell Sort: List: [5, 10, 60, 0, -1, 34, 6, 10]
+
+            Gap= List.length /2, which is 8/2 = 4.
+            So this means there are 4 interleaves this iteration made from List.
+            Interleave1: [5,-1], Interleave2: [10,34], Interleave3: [60,6] and Interleave4: [0,10].
+            Each interleave contains one element and every element the gap distance away from it.
+
+            Compare 5 and -1 in Interleave1, 5 is less than -1, so swap 5 and -1.
+            After that Interleave1: [-1,5]
+
+            Compare 10 and 34 in Interleave2, 34 is greater than 10, so no swap occurs.
+
+            Compare 60 and 6 in Interleave3, 6 is less than 60, so swap 6 and 60.
+            After that Interleave3: [6, 60]
+
+            Compare 0 and 10 in Interleave3, 10 is greater than 0 so no swap occurs.
+        After one iteration List: [-1, 10, 6, 0, 5, 34, 60, 10]
+
+            Gap= Gap/2 so 4/2 = 2
+            So there will be 2 interleaves.
+            Interleave1: [-1, 6, 5, 60] and Interleave2: [10, 0, 34, 10]
+
+            Compare -1 and 6 in Interleave1, 6 is greater than -1 so no swap.
+
+            Compare 6 and 5 in Interleave1, 5 is less than 6 so swap 5 and 6.
+            After that Interleave1: [-1, 5, 6, 60].
+            Compare -1 and 5 in Interleave1, 5 is greater than -1 so no swap.
+
+            Compare 6 and 60 in Interleave1, 60 is greater than 6 so no swap.
+
+            Compare 10 and 0 in Interleave2, 0 is less than 10 so swap 0 and 10.
+            After that Interleave2: [0, 10, 34, 10].
+
+            Compare 10, the first one and 34 in Interleave2, 34 is greater than 10 so no swap.
+
+            Compare 34 and 10, the last one, 10 is less than 34 so swap 10 and 34.
+            After that Interleave2: [0, 10, 10, 34].
+            Compare 10 and 10, 10 is not less than 10, so no swap.
+        After second iteration List: [-1, 0, 6, 10, 5, 10, 60, 34]
+
+            Gap = Gap/2 so 2/2=1.
+
+            Compare 0 and -1, 0 is greater than -1 so no swap.
+
+            Compare 6 and 0, 6 is greater than 0 so no swap.
+
+            Compare 10 and 6, 10 is greater than 6 so no swap.
+
+            Compare 5 and 10, 5 is less than 10 so swap 5 and 10.
+            List after: [-1, 0, 6, 5, 10, 10, 60, 34]
+            Compare 5 and 6, 5 is less than 6 so swap 5 and 6.
+            List after: [-1, 0, 5, 6, 10, 10, 60, 34]
+            Compare 5 and 0, 5 is greater than 0 so no swap.
+
+            Compare 10 and 10, 10 is not less than 10 so no swap.
+
+            Compare 60 and 10, 60 is greater than 10 so no swap.
+
+            Compare 34 and 60, 34 is less than 60 so swap 34 and 60.
+            List after: [-1, 0, 5, 6, 10, 10, 34, 60]
+            Compare 34 and 10, 34 is greater than 10 so no swap.
+
+            Compare 60 and 34, 60 is greater than 34 so no swap.
+        After third iteration List: [-1, 0, 5, 6, 10, 10, 34, 60]
+        The list if fully sorted.

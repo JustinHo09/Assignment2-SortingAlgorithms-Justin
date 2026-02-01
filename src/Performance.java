@@ -20,12 +20,16 @@ public class Performance {
             testing.test(iterate,sizes[i]);
         }
 
+        System.out.println();
+
         // Insertion sort
         System.out.println("Sorting algorithm - Insertion sort");
         testing = new Tester(insertion);
         for(int i=0; i<sizes.length; i++){
             testing.test(iterate,sizes[i]);
         }
+
+        System.out.println();
 
         // Selection sort
         System.out.println("Sorting algorithm - Selection sort");
@@ -34,6 +38,8 @@ public class Performance {
             testing.test(iterate,sizes[i]);
         }
 
+        System.out.println();
+
         // Shell sort
         System.out.println("Sorting algorithm - Shell sort");
         testing = new Tester(shell);
@@ -41,9 +47,12 @@ public class Performance {
             testing.test(iterate,sizes[i]);
         }
 
+        System.out.println();
+
         // Quick sort
         System.out.println("Sorting algorithm - Quick sort");
 
+        System.out.println();
 
         // Merge sort
         System.out.println("Sorting algorithm - Merge sort");

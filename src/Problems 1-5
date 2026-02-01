@@ -1,5 +1,26 @@
-Problem 1 Merge Sort: List1: [1, 2, 3, 6], List2:[-3, 0, 6, 7], and List3: [] (size of 8)
+Problem 1 Merge Sort: List1: [1, 2, 3, 6], List2:[-3, 0, 6, 7], and Result: [] (size of 8)
 
+                Compare 1 from List1 and -3 from List2, -3 is less than 1 so its added to Result.
+                Result afterwards is: [-3].
+            After the first iteration Result: [-3].
+
+                Compare 1 from List1 and 0 from List2, 0 is less than 1 so its added to Result.
+                Result afterwards is: [-3, 0].
+            After the second iteration Result: [-3, 0].
+
+                Compare 1 from List1 and 6 from List2, 1 is less than 6 so its added to Result.
+                Result afterwards is: [-3, 0, 1].
+            After the third iteration Result: [-3, 0, 1].
+
+                Compare 2 from List1 and 6 from List2, 2 is less than 6 so it is added to Result.
+                Result afterwards is: [-3, 0, 1, 2].
+            After the fourth iteration Result: [-3, 0, 1, 2].
+
+                Compare 3 from List1 and 6 from List2, 3 is less than 6 so it is added to Result.
+                Result afterwards is: [-3, 0, 1, 2, 3].
+            After the fifth iteration Result: [-3, 0, 1, 2, 3].
+
+                Compare 6 from List1 and 6 from List2, 6 is equal to 6
 
 
 

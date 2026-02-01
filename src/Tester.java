@@ -25,8 +25,14 @@ public class Tester {
     }
 
     public void test(int iterations, int size){
-        int sum;
+        double sum=0;
 
+        for(int i = 0; i< iterations; i++){
+            sum = sum+ singleTest(size);
+        }
+
+        double average = sum/iterations;
+        System.out.println("Sorted "+ size+" elements in "+ average+ " ms(average)");
         
     }
 }

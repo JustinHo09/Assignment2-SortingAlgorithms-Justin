@@ -166,3 +166,12 @@ Problem 4 Shell Sort: List: [5, 10, 60, 0, -1, 34, 6, 10]
             Compare 60 and 34, 60 is greater than 34 so no swap.
         After third iteration List: [-1, 0, 5, 6, 10, 10, 34, 60]
         The list if fully sorted.
+
+Problem 5:
+
+        My ranking of the sorting algorithms is:
+        1.
+        2.
+        3. Bubble sort and Selection sort
+
+        The reason why both bubble and selection sort are last and tied for last is because

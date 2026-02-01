@@ -24,4 +24,9 @@ public class Tester {
         return time;
     }
 
+    public void test(int iterations, int size){
+        int sum;
+
+        
+    }
 }

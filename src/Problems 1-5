@@ -1,4 +1,4 @@
-Problem 1 Merge Sort: List1: [1, 2, 3, 6], List2:[-3, 0, 6, 7], and Result: [] (size of 8)
+Problem 1 Mergesort: List1: [1, 2, 3, 6], List2:[-3, 0, 6, 7], and Result: [] (size of 8)
 
                 Compare 1 from List1 and -3 from List2, -3 is less than 1 so its added to Result.
                 Result afterwards is: [-3].
@@ -90,3 +90,5 @@ Problem 2 Insertion Sort: List: [-21, 5, 7, -10, 61, 8, 3, 10]
                           that means 10 is now also in ordered position.
           After seventh iteration: List [-21, -10, 3, 5, 7, 8, 10, 61]
           The list is fully sorted.
+
+Problem 3 Quicksort: List: [-5, 4, 2, 619, 11, 5, 620, -3]

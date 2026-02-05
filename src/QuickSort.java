@@ -37,30 +37,32 @@ public class QuickSort implements SortingAlgorithm{
             swap(input, pivotIndex, high);
             pivotIndex = high;
         }
+        int i = low;
+        int j = high-1;
 
         boolean crossed=false;
 
         while(!crossed){
 
-            while(input[low] < input[pivot]){
-                low++;
+            while(input[i] < input[pivot]){
+                i++;
             }
 
-            while(input[high-1] > input[pivot]){
-                high--;
+            while(input[j-1] > input[pivot]){
+                j--;
             }
 
-            if(high < low){
+            if(j < i){
                 crossed = true;
-                swap(input, pivotIndex, low);
+                swap(input, pivotIndex, i);
             }else{
-                swap(input, low, high);
-                low++;
-                high--;
+                swap(input, i, j);
+                i++;
+                j--;
             }
         }
 
-        return low;
+        return i;
     }
 
     public void swap(int[] input, int first, int second){

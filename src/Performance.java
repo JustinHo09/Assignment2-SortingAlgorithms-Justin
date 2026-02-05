@@ -12,6 +12,7 @@ public class Performance {
         SortingAlgorithm selection = new SelectionSort();
         SortingAlgorithm shell = new ShellSort();
         SortingAlgorithm quick = new QuickSort();
+        SortingAlgorithm merge = new MergeSort();
 
 
         // Bubble sort
@@ -74,7 +75,10 @@ public class Performance {
 
         // Merge sort
         System.out.println("Sorting algorithm - Merge sort");
-
+        testing = new Tester(merge);
+        for(int i=0; i<sizes.length;i++){
+            testing.test(iterate,sizes[i]);
+        }
 
     }
 }

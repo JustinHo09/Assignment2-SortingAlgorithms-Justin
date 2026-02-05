@@ -10,12 +10,14 @@ public class Tester {
 
     public double singleTest(int size){
         double time;
-
+        KSorted ksort = new KSorted();
         int[] sample = new int[size];
         Random gen = new Random();
         for(int i=0; i < size; i++){
             sample[i]= gen.nextInt();
         }
+
+        //ksort.generateKSorted(sample);
 
         long start_time = System.nanoTime();
 
@@ -28,15 +30,15 @@ public class Tester {
         return time;
     }
 
-    public void test(int iterations, int size){
+    public String test(int iterations, int size){
         double sum=0;
-
+        String output;
         for(int i = 0; i< iterations; i++){
             sum = sum+ singleTest(size);
         }
 
         double average = sum/iterations;
-        System.out.println("Sorted "+ size+" elements in "+ average+ " ms(average)");
-
+        output = "Sorted "+ size+" elements in "+ average+ " ms(average)";
+        return output;
     }
 }

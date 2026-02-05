@@ -11,13 +11,14 @@ public class Performance {
         SortingAlgorithm insertion = new InsertionSort();
         SortingAlgorithm selection = new SelectionSort();
         SortingAlgorithm shell = new ShellSort();
+        SortingAlgorithm quick = new QuickSort();
 
 
         // Bubble sort
         System.out.println("Sorting algorithm - Bubble sort");
         testing= new Tester(bubble);
         for(int i=0; i<sizes.length; i++){
-            if(sizes[i] <= 20000) {
+            if(sizes[i] <= 100) {
                 testing.test(iterate, sizes[i]);
             }else{
                 System.out.println("Sorting "+ sizes[i]+" elements takes too long.");
@@ -30,7 +31,7 @@ public class Performance {
         System.out.println("Sorting algorithm - Insertion sort");
         testing = new Tester(insertion);
         for(int i=0; i<sizes.length; i++){
-            if(sizes[i] <= 20000) {
+            if(sizes[i] <= 100) {
                 testing.test(iterate, sizes[i]);
             }else{
                 System.out.println("Sorting "+ sizes[i]+" elements takes too long.");
@@ -43,7 +44,7 @@ public class Performance {
         System.out.println("Sorting algorithm - Selection sort");
         testing = new Tester(selection);
         for(int i=0; i<sizes.length; i++){
-            if(sizes[i] <= 75000) {
+            if(sizes[i] <= 100) {
                 testing.test(iterate, sizes[i]);
             }else{
                 System.out.println("Sorting "+ sizes[i]+" elements takes too long(Tens of minutes" +
@@ -64,6 +65,10 @@ public class Performance {
 
         // Quick sort
         System.out.println("Sorting algorithm - Quick sort");
+        testing = new Tester(quick);
+        for(int i = 0; i<sizes.length; i++){
+            testing.test(iterate,sizes[i]);
+        }
 
         System.out.println();
 

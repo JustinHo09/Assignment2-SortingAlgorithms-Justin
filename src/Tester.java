@@ -3,6 +3,7 @@ import java.util.Random;
 public class Tester {
 
     private SortingAlgorithm algor;
+    private String k = "";
 
     public Tester (SortingAlgorithm sa){
         algor= sa;
@@ -17,7 +18,7 @@ public class Tester {
             sample[i]= gen.nextInt();
         }
 
-        //ksort.generateKSorted(sample);
+        //ksort.generateKSorted(sample); k="10-Sorted data of: ";
 
         long start_time = System.nanoTime();
 
@@ -38,7 +39,7 @@ public class Tester {
         }
 
         double average = sum/iterations;
-        output = "Sorted "+ size+" elements in "+ average+ " ms(average)";
+        output = "Sorted "+ k +size+" elements in "+ average+ " ms(average)";
         return output;
     }
 }

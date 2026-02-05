@@ -22,46 +22,41 @@ public class QuickSort implements SortingAlgorithm{
         int median = (high+low)/2;
         if((input[low] <= input[median] && input[median] <= input[high] )||
                 (input[low] >= input[median] && input[median] >= input[high])){
-            pivot = input[median];
             pivotIndex = median;
         }else if( (input[median] <= input[low] && input[low] <= input[high]) ||
                 (input[high] <= input[low] && input[low] < input[median])){
-            pivot = input[low];
             pivotIndex = low;
         }else{
-            pivot = input[high];
             pivotIndex = high;
         }
+        pivot = input[pivotIndex];
+
         //swap pivot with last element
-        if(pivot != input[high]){
-            swap(input, pivotIndex, high);
-            pivotIndex = high;
-        }
+        swap(input, pivotIndex, high);
+        pivotIndex = high;
+
         int i = low;
         int j = high-1;
 
         boolean crossed=false;
 
-        while(!crossed){
+        while(i <= j){
 
-            while(input[i] < pivot && i<high){
+            while(i<high && input[i] < pivot){
                 i++;
             }
 
-            while(input[j] > pivot && j>low){
+            while(j>low && input[j] > pivot){
                 j--;
             }
 
-            if(j < i){
-                crossed = true;
-                swap(input, pivotIndex, i);
-            }else{
+            if(i<=j) {
                 swap(input, i, j);
                 i++;
                 j--;
             }
         }
-
+        swap(input, pivotIndex, i);
         return i;
     }
 

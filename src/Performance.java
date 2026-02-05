@@ -19,6 +19,7 @@ public class Performance {
         String fileName = "SortingAlgorithmReport.txt";
         FileWriter fw= new FileWriter(fileName);
         fw.write("Sorting Algorithm Report \n");
+
         // Bubble sort
         fw.write("\n Sorting algorithm - Bubble sort \n");
         testing= new Tester(bubble);
@@ -28,7 +29,6 @@ public class Performance {
             }
         }
 
-        System.out.println();
 
         // Insertion sort
         fw.write("\n Sorting algorithm - Insertion sort \n");
@@ -39,7 +39,6 @@ public class Performance {
             }
         }
 
-        System.out.println();
 
         // Selection sort
         fw.write("\n Sorting algorithm - Selection sort \n");
@@ -50,7 +49,6 @@ public class Performance {
             }
         }
 
-        System.out.println();
 
         // Shell sort
         fw.write("\n Sorting algorithm - Shell sort \n");
@@ -59,7 +57,6 @@ public class Performance {
             fw.write(testing.test(iterate, sizes[i])+"\n");
         }
 
-        System.out.println();
 
         // Quick sort
         fw.write("\n Sorting algorithm - Quick sort \n");
@@ -68,7 +65,6 @@ public class Performance {
             fw.write(testing.test(iterate, sizes[i])+"\n");
         }
 
-        System.out.println();
 
         // Merge sort
         fw.write("\n Sorting algorithm - Merge sort \n");
@@ -78,5 +74,6 @@ public class Performance {
         }
         fw.close();
 
+        System.out.println("Algorithm report finished and ready in: "+fileName);
     }
 }

@@ -6,12 +6,15 @@ public class QuickSort implements SortingAlgorithm{
     }
 
     public void quickSort(int [] input, int low, int high){
+        // This will see if the parition only has one element inside of it
         if(high <= low){
             return;
         }
         int pivot = partition(input,low,high);
+        quickSort(input, low, pivot-1);
+        quickSort(input, pivot+1, high);
     }
-    // [ 0, 5, 7, 9, 10]
+
     public int partition(int [] input, int low, int high){
         int pivot;
         int pivotIndex;

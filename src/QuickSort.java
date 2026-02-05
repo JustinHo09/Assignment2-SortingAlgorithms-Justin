@@ -44,11 +44,11 @@ public class QuickSort implements SortingAlgorithm{
 
         while(!crossed){
 
-            while(input[i] < pivot){
+            while(input[i] < pivot && i<high){
                 i++;
             }
 
-            while(input[j] > pivot){
+            while(input[j] > pivot && j>low){
                 j--;
             }
 

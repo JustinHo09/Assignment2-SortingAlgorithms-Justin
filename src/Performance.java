@@ -1,10 +1,12 @@
+import java.io.FileWriter;
+import java.io.IOException;
+
 public class Performance {
 
-    public static void main(String[] args){
+    public static void main(String[] args) throws IOException {
 
         int [] sizes = {100,500,1000,2000,5000,10000,20000,75000,150000};
         int iterate = 20;
-
         Tester testing;
 
         SortingAlgorithm bubble = new BubbleSort();
@@ -14,71 +16,67 @@ public class Performance {
         SortingAlgorithm quick = new QuickSort();
         SortingAlgorithm merge = new MergeSort();
 
-
+        String fileName = "SortingAlgorithmReport.txt";
+        FileWriter fw= new FileWriter(fileName);
+        fw.write("Sorting Algorithm Report \n");
         // Bubble sort
-        System.out.println("Sorting algorithm - Bubble sort");
+        fw.write("\n Sorting algorithm - Bubble sort \n");
         testing= new Tester(bubble);
         for(int i=0; i<sizes.length; i++){
             if(sizes[i] <= 100) {
-                testing.test(iterate, sizes[i]);
-            }else{
-                System.out.println("Sorting "+ sizes[i]+" elements takes too long.");
+                fw.write(testing.test(iterate, sizes[i])+"\n");
             }
         }
 
         System.out.println();
 
         // Insertion sort
-        System.out.println("Sorting algorithm - Insertion sort");
+        fw.write("\n Sorting algorithm - Insertion sort \n");
         testing = new Tester(insertion);
         for(int i=0; i<sizes.length; i++){
             if(sizes[i] <= 100) {
-                testing.test(iterate, sizes[i]);
-            }else{
-                System.out.println("Sorting "+ sizes[i]+" elements takes too long.");
+                fw.write(testing.test(iterate, sizes[i])+"\n");
             }
         }
 
         System.out.println();
 
         // Selection sort
-        System.out.println("Sorting algorithm - Selection sort");
+        fw.write("\n Sorting algorithm - Selection sort \n");
         testing = new Tester(selection);
         for(int i=0; i<sizes.length; i++){
             if(sizes[i] <= 100) {
-                testing.test(iterate, sizes[i]);
-            }else{
-                System.out.println("Sorting "+ sizes[i]+" elements takes too long(Tens of minutes" +
-                        " per iteration at least)");
+                fw.write(testing.test(iterate, sizes[i])+"\n");
             }
         }
 
         System.out.println();
 
         // Shell sort
-        System.out.println("Sorting algorithm - Shell sort");
+        fw.write("\n Sorting algorithm - Shell sort \n");
         testing = new Tester(shell);
         for( int i=0; i<sizes.length; i++){
-            testing.test(iterate,sizes[i]);
+            fw.write(testing.test(iterate, sizes[i])+"\n");
         }
 
         System.out.println();
 
         // Quick sort
-        System.out.println("Sorting algorithm - Quick sort");
+        fw.write("\n Sorting algorithm - Quick sort \n");
         testing = new Tester(quick);
         for(int i = 0; i<sizes.length; i++){
-            testing.test(iterate,sizes[i]);
+            fw.write(testing.test(iterate, sizes[i])+"\n");
         }
 
         System.out.println();
 
         // Merge sort
-        System.out.println("Sorting algorithm - Merge sort");
+        fw.write("\n Sorting algorithm - Merge sort \n");
         testing = new Tester(merge);
         for(int i=0; i<sizes.length;i++){
-            testing.test(iterate,sizes[i]);
+            fw.write(testing.test(iterate, sizes[i])+"\n");
         }
+        fw.close();
 
     }
 }

@@ -31,7 +31,7 @@ Problem 1 Mergesort: List1: [1, 2, 3, 6], List2:[-3, 0, 6, 7], and Result: [].
                 Result afterwards is: [-3, 0, 1, 2, , , , ].
                 Since 2 came from List1, increment i by one, then increment k by one.
                 i=2, j=2, k=4.
-            After the fourth iteration Result: [-3, 0, 1, , , , , ], i=2, j=2,k=3.
+            After the fourth iteration Result: [-3, 0, 1, , , , , ], i=2, j=2,k=4.
 
                 Compare List1[i] to List2[j], so List1[2] to List2[2], 3 compared to 6,
                 3 is less than 6 so it is added to result at index k.
@@ -45,14 +45,14 @@ Problem 1 Mergesort: List1: [1, 2, 3, 6], List2:[-3, 0, 6, 7], and Result: [].
                 Result afterwards is: [-3, 0, 1, 2, 3, 6, , ].
                 Since 6 came from List1, increment j by one, then increment k by one.
                 i=3, j=3, k=6.
-            After the sixth iteration Result: [-3, 0, 1, 2, 3, 6, , ].
+            After the sixth iteration Result: [-3, 0, 1, 2, 3, 6, , ], i=3, j=3, k=6.
 
                 Compare List1[i] to List2[j], so List1[3] to List2[3], 6 compared to 7,
                 6 is less than 7 so it is added to result at index k.
                 Result afterwards is: [-3, 0, 1, 2, 3, 6, 6, ].
                 Since 6 came from List1, increment i by one, then increment k by one.
                 i=4, j=3, k=7.
-            After the seventh iteration Result: [-3, 0, 1, 2, 3, 6, 6, ].
+            After the seventh iteration Result: [-3, 0, 1, 2, 3, 6, 6, ], i=4, j=3, k=7.
 
             Since i = List1.length, 4=4, this loop is exited then since i is not less than
             List1.length and j < List2.length, 3 <4, we enter a while loop to transfer whats

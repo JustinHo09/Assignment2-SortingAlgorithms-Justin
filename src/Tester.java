@@ -18,7 +18,7 @@ public class Tester {
             sample[i]= gen.nextInt();
         }
 
-        //ksort.generateKSorted(sample); k="10-Sorted data of: ";
+        ksort.generateKSorted(sample); k="10-Sorted data of: ";
 
         long start_time = System.nanoTime();
 

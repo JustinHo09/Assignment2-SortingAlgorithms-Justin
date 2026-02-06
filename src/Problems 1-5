@@ -197,7 +197,7 @@ Problem 3 Quicksort: List: [-5, 4, 2, 619, 11, 5, 620, -3]
             swap element at i with pivot, so List[i] and pivot, swap 4 and -3.
             List: [-5, -3, 2, 619, 11, 5, 620, 4]
             pivotIndex = 1;
-            Since 3 was the pivot 3 is sorted.
+            Since -3 was the pivot -3 is sorted.
     After 1st call to pivot, List: [-5, -3, 2, 619, 11, 5, 620, 4].
 
             recursive call on left partition, low = 0, high = pivotIndex-1 = 0.
@@ -324,26 +324,47 @@ Problem 4 Shell Sort: List: [5, 10, 60, 0, -1, 34, 6, 10]
             Interleaves are not separate lists just the sections of the list that will be
             evaluated and sorted like its own.
 
+            i =0, i is the starting index, and stop incrementing i when i>=gap.
+            Interleave1 = List[i] and List[i+gap] = List[0] and List[0+4]=List[4], so 5 and -1
+            Increment i by one, i=1.
+            Interleave2 = List[i] and List[i+gap] = List[1] and List[1+4]=List[5], so 10 and 34.
+            Increment i by one, i=2.
+            Interleave3 = List[i] and List[i+gap] = List[2] and List[2+4]=List[6], so 60 and 6.
+            Increment i by one, i=3.
+            Interleave4 = List[i] and List[i+gap] = List[3] and List[3+4]=List[7], so 0 and 10.
+            Increment i by one, i=4.
+            i >= gap, 4>=4 so stop incrementing i and interleaves are done.
+
             Interleave1: [5,-1], Interleave2: [10,34], Interleave3: [60,6] and Interleave4: [0,10].
             Each interleave contains one element and every element the gap distance away from it.
 
-            Compare 5 and -1 in Interleave1, 5 is less than -1, so swap 5 and -1.
+            Compare 5 and -1 in Interleave1, 5 is greater than -1, so swap 5 and -1.
             After that Interleave1: [-1,5]
-            List: [-1, 10, 60, 0, -1, 34, 6, 10].
+            List: [-1, 10, 60, 0, 5, 34, 6, 10].
 
             Compare 10 and 34 in Interleave2, 34 is greater than 10, so no swap occurs.
-            List: [-1, 10, 60, 0, -1, 34, 6, 10].
+            List: [-1, 10, 60, 0, 5, 34, 6, 10].
 
             Compare 60 and 6 in Interleave3, 6 is less than 60, so swap 6 and 60.
             After that Interleave3: [6, 60]
-            List: [-1, 10, 6, 0, -1, 34, 60, 10].
+            List: [-1, 10, 6, 0, 5, 34, 60, 10].
 
             Compare 0 and 10 in Interleave3, 10 is greater than 0 so no swap occurs.
-            List: [-1, 10, 6, 0, -1, 34, 60, 10].
+            List: [-1, 10, 6, 0, 5, 34, 60, 10].
         After one iteration List: [-1, 10, 6, 0, 5, 34, 60, 10]
 
             Gap= Gap/2 so 4/2 = 2
             So there will be 2 interleaves.
+            i = 0 again, i is the starting index, and stop incrementing i when i >= gap.
+            Interleave1: List[i], List[i+gap], List[i+gap+gap], List[i+gap+gap+gap] =
+                         List[0], List[2], List[4], List[6] = -1,6,5,60.
+                         increment i by one, i=1.
+
+            Interleave2: List[i], List[i+gap], List[i+gap+gap], List[i+gap+gap+gap] =
+                         List[1], List[3], List[5], List[7] = 10, 0, 34, 10.
+                         increment i by one, i=2.
+            i >= gap, 2 >= 2  so stop incrementing i and interleaves are done.
+
             Interleave1: [-1, 6, 5, 60] and Interleave2: [10, 0, 34, 10]
 
             Compare -1 and 6 in Interleave1, 6 is greater than -1 so no swap.
@@ -372,38 +393,39 @@ Problem 4 Shell Sort: List: [5, 10, 60, 0, -1, 34, 6, 10]
 
             Compare 10 and 10, 10 is not less than 10, so no swap.
             List: [-1, 0, 5, 10, 6, 10, 60, 34].
-        After second iteration List: [-1, 0, 6, 10, 5, 10, 60, 34]
+        After second iteration List: [-1, 0, 5, 10, 6, 10, 60, 34]
 
             Gap = Gap/2 so 2/2=1.
 
             Compare 0 and -1, 0 is greater than -1 so no swap.
-            List: [-1, 0, 6, 10, 5, 10, 60, 34].
-
-            Compare 6 and 0, 6 is greater than 0 so no swap.
-            List: [-1, 0, 6, 10, 5, 10, 60, 34].
-
-            Compare 10 and 6, 10 is greater than 6 so no swap.
-            List: [-1, 0, 6, 10, 5, 10, 60, 34].
-
-            Compare 5 and 10, 5 is less than 10 so swap 5 and 10.
-            List after: [-1, 0, 6, 5, 10, 10, 60, 34].
-
-            Compare 5 and 6, 5 is less than 6 so swap 5 and 6.
-            List after: [-1, 0, 5, 6, 10, 10, 60, 34].
+            List: [-1, 0, 5, 10, 6, 10, 60, 34].
 
             Compare 5 and 0, 5 is greater than 0 so no swap.
+            List: [-1, 0, 5, 10, 6, 10, 60, 34].
+
+            Compare 10 and 5, 10 is greater than 5 so no swap.
+            List: [-1, 0, 5, 10, 6, 10, 60, 34].
+
+            Compare 6 and 10, 6 is less than 10 so swap 6 and 10.
+            List: [-1, 0, 5, 6, 10, 10, 60, 34].
+
+            Compare 5 and 5, 6 is greater than 5 so no swap.
+            List: [-1, 0, 5, 6, 10, 10, 60, 34].
 
             Compare 10 and 10, 10 is not less than 10 so no swap.
+            List: [-1, 0, 5, 6, 10, 10, 60, 34].
 
             Compare 60 and 10, 60 is greater than 10 so no swap.
+            List: [-1, 0, 5, 6, 10, 10, 60, 34].
 
             Compare 34 and 60, 34 is less than 60 so swap 34 and 60.
-            List after: [-1, 0, 5, 6, 10, 10, 34, 60]
+            List: [-1, 0, 5, 6, 10, 10, 34, 60].
             Compare 34 and 10, 34 is greater than 10 so no swap.
+            List: [-1, 0, 5, 6, 10, 10, 34, 60].
+        After third iteration List: [-1, 0, 5, 6, 10, 10, 34, 60].
 
-            Compare 60 and 34, 60 is greater than 34 so no swap.
-        After third iteration List: [-1, 0, 5, 6, 10, 10, 34, 60]
-        The list if fully sorted.
+        Return list.
+        The list is fully sorted.
 
 Problem 5:
 
@@ -411,5 +433,16 @@ Problem 5:
         (1 fastest to 2 slowest)
         1. Merge Sort
         2. Quick sort, Shell sort, Selection Sort, Insertion Sort, and Bubble Sort.(tied)
+
+        The reason quick, shell, selection, insertion, and bubble sort are all tied is because
+        they all have the same worst time complexity of O(n^2). Since they all have the same
+        worst case time complexity, in theory they should all have a very similar runtime
+        to each other which is why they are all tied. Merge sort is not with the other because
+        its worst case time complexity is O(n log n). In terms of asymptotic growth, O(n^2)
+        grows much faster than O(n log n), so most the time O(n^2) will be greater than O(nlogn).
+        In the case of runtime, since O(n^2) grows faster than O(nlogn), this means that the
+        runtime of algorithms with O(n^2) complexity will be high than that of O(nlogn).
+        Since O(n^2) would have a longer runtime than O(nlogn), merge sort will be faster than
+        the other sorting algorithms, which is why its ranked first above thee rest.
 
 

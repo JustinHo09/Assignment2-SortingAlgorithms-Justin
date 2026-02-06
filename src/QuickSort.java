@@ -38,15 +38,13 @@ public class QuickSort implements SortingAlgorithm{
         int i = low;
         int j = high-1;
 
-        boolean crossed=false;
-
         while(i <= j){
 
-            while(i<high && input[i] < pivot){
+            while(i<=j && input[i] < pivot){
                 i++;
             }
 
-            while(j>low && input[j] > pivot){
+            while(i<=j && input[j] > pivot){
                 j--;
             }
 

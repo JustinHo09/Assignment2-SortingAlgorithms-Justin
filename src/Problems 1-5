@@ -173,6 +173,7 @@ Problem 3 Quicksort: List: [-5, 4, 2, 619, 11, 5, 620, -3]
             swap element at i with pivot, so List[i] and pivot, swap 4 and -3.
             List: [-5, -3, 2, 619, 11, 5, 620, 4]
             pivotIndex = 1;
+            Since 3 was the pivot 3 is sorted.
     After 1st call to pivot, List: [-5, -3, 2, 619, 11, 5, 620, 4].
 
             recursive call on left partition, low = 0, high = pivotIndex-1 = 0.
@@ -206,6 +207,7 @@ Problem 3 Quicksort: List: [-5, 4, 2, 619, 11, 5, 620, -3]
                 swap element at i with pivot,so List[i] and pivot, swap 619 and 4.
                 List: [-5, -3, 2, 4, 11, 5, 620, 619]
                 pivotIndex = 3;
+                Since 4 was the pivot 4 is sorted.
     After 1st set of recursive calls are done List: [-5, -3, 2, 4, 11, 5, 620, 619]
 
                 recursive call on left side of the first right partition:
@@ -240,11 +242,14 @@ Problem 3 Quicksort: List: [-5, 4, 2, 619, 11, 5, 620, -3]
 
                 Loop until i>j or List[j] < pivot.
                 compare List[j] and pivot, List[5] = 619 > 11, so decrement j and try again, j = 4.
-                Since i >j, 5 >4 stop the loop.
+                Since i >j, 5 >4 stop the loop, j=4.
+
+                Since i>j don't swap elements at index i and j.
 
                 swap element at i with pivot, swap List[i] and pivot, swap 619 and 11.
                 List: [-5, -3, 2, 4, 5, 11, 620, 619].
                 pivotIndex = 5;
+                Since 11 was the pivot 11 is sorted.
     After second set of recursive calls List: [-5, -3, 2, 4, 5, 11, 620, 619].
 
                 recursive call on left side of previous right partition:
@@ -252,13 +257,39 @@ Problem 3 Quicksort: List: [-5, 4, 2, 619, 11, 5, 620, -3]
                 Since high <= low, 4<=4, return so this recursive call is done and 5 is sorted.
 
                 recursive call on right side of the previous right partition:
-                low = pivotIndex+1 = 5+1 =  6, high = List.length-1 = 7.
-                
+                low = pivotIndex+1 = 5+1 = 6, high = List.length-1 = 7,
+                median = high+low/2 = 7+6/2 = 6 (int division).
+                pivot = median of(List[low], List[median], List[high] = 620, 620, 619 = 620
+                Swap pivot and last element, swap pivot and List[high], swap 620 and 619.
+                List: [-5, -3, 2, 4, 5, 11, 619, 620].
+                i = low, j=high-1, i=6, j = 7-1 = 6.
 
+                Loop until i > j or List[i] > pivot:
+                compare List[i] and pivot, List[6] =619 = 619, increment i and try again, now i=7.
+                i > j, 7>6 so stop loop, i=7;
 
+                Loop until i>j or List[j] < pivot:
+                since i>j 7>6 loop is not taken, j=6;
 
+                i>j so don't swap elements at index i and j.
 
+                swap element at index i with pivot, swap List[7] and pivot, swap 620 and 620.
+                List: [-5, -3, 2, 4, 5, 11, 619, 620].
+                pivotIndex = 7
+                Since 620 is the pivot 620 is sorted.
+    After third set of recursive calls List: [-5, -3, 2, 4, 5, 11, 619, 620].
 
+                recursive call on left side of previous right partition:
+                low = 6, high = pivotIndex-1 = 7-1=6.
+                Since high <= low, 6 <=6, return so this recursive call is done an 619 is sorted.
+
+                recursive call on the right side of the previous right partition:
+                low = pivotIndex+1 = 7+1 =8, high = List.length-1=7.
+                Since high <= low, 8<=7, return so this recursive call is done.
+    After the fourth set of recursive calls List: [-5, -3, 2, 4, 5, 11, 619, 620].
+
+    All recursive calls have hit the base case and returned, so sorting is done and
+    List: [-5, -3, 2, 4, 5, 11, 619, 620].
 
 
 

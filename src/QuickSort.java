@@ -10,9 +10,9 @@ public class QuickSort implements SortingAlgorithm{
         if(high <= low){
             return;
         }
-        int pivot = partition(input,low,high);
-        quickSort(input, low, pivot-1);
-        quickSort(input, pivot+1, high);
+        int pivotIndex = partition(input,low,high);
+        quickSort(input, low, pivotIndex-1);
+        quickSort(input, pivotIndex+1, high);
     }
 
     public int partition(int [] input, int low, int high){

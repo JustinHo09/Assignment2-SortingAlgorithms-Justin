@@ -384,51 +384,8 @@ Problem 4 Shell Sort: List: [5, 10, 60, 0, -1, 34, 6, 10]
 Problem 5:
 
         My ranking of the sorting algorithms is:
-        (1 fastest to 5 slowest)
+        (1 fastest to 2 slowest)
         1. Merge Sort
-        2. Quick Sort
-        3. Shell Sort
-        4. Insertion Sort and Bubble Sort tied
-        5. Selection sort
+        2. Quick sort, Shell sort, Selection Sort, Insertion Sort, and Bubble Sort.(tied)
 
-        The reason I ranked selection sort last is because no matter the input size
-        or order it will always do two passes of the array so it will always be O(n^2).
-        So since it will always be O(n^2) no matter what the array is I think it will consistently
-        have the longest runtime compared to all the other sorting methods. Then the reason I
-        predicted a tie for insertion and bubble sort is because both of them have a worst
-        case time complexity of O(n^2), and a best case time complexity of O(n). Since, their
-        worst and best case time complexities are the same, I think that insertion and bubble
-        sort will have very similar run times to each other, which is why I believe that both
-        of them are tied on the ranking. The reason I think that both of them are ranked higher
-        than selection sort is because in their best case they are O(n), which is faster compared
-        to selection sort's best case of O(n^2). So, with possibility of the best case in mind,
-        I think that insertion and bubble sort will do better than selection sort. Even so the
-        best case is not always likely to happen, compared to the other algorithms since it
-        only happens when the lists are fully sorted, which is why they are  not the highest.
-        So I believe that on average it will likely be O(n^2) more than it is O(n).
-        Next, I believe shell sort is the third fastest. Like the previous three algorithms, it
-        has a worst case time complexity of O(n^2), but it has a best case time complexity of
-        O(nlog2n). The reason it is higher than insertion and bubble sort, despite having
-        an identical worse cast and a slower best case is because of my previous belief that
-        insertion and bubble sort will be more likely to have a O(n^2) complexity. Because of that
-        looking at the worst case for shell sort it will give a similar run time to bubble and
-        insertion. Then, looking at shell's best case of O(nlog^2n) is faster than O(n^2), so
-        I believe that most of the time in shell sort's run time will be less than or equal to
-        the runtimes of insertion and bubble sort, which is why I ranked it above bubble and
-        insertion sort. Next, I believe that quick sort is the next fastest. It's worst case is
-        O(n^2) and its best case is O(nlog n). For similar logic I used for shell sort. I think its
-        runtime will be less than or equal to that of insertion and bubble sort, since O(n^2) is
-        equal to O(n^2) and O(nlog n) is faster than O(n^2). The reason I believe it will be faster
-        than shell sort is due to their worst and best case time complexities. At their worst
-        both of them have a O(n^2) time complexity so, they will have similar runtimes at least.
-        Then looking at their best cases, O(n log n) for quick sort is faster than O(nlog^2n)
-        for shell sort, so at their best quick sort is faster. With that in mind, I think that
-        quick sort will at the very leave have a similar runtime to shell sort, but be faster
-        because its best case is faster than shell's best case. Finally, I believe that merge
-        sort is the fastest. This is becuase its worst and best case is O(nlogn) so it will
-        always have that time complexity no matter the array or the order of its contents.
-        So, when comparing it to all previous ones, which have a time complexity of O(n^2)
-        in the worst case, it is faster in the worst case than all of them. Then compared to
-        quick sort, in the best case they will have a similar run time. So, it will have a
-        better run time than all of them in the worst case, and a runtime equal to or less than
-        quick sort. So that is why I ranked merge sort as the fastest.
+        

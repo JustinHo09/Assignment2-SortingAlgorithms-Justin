@@ -24,9 +24,9 @@ public class Performance {
         fw.write("\n Sorting algorithm - Bubble sort \n");
         testing= new Tester(bubble);
         for(int i=0; i<sizes.length; i++){
-            if(sizes[i] <= 100) {
+
                 fw.write(testing.test(iterate, sizes[i])+"\n");
-            }
+
         }
 
 
@@ -34,9 +34,9 @@ public class Performance {
         fw.write("\n Sorting algorithm - Insertion sort \n");
         testing = new Tester(insertion);
         for(int i=0; i<sizes.length; i++){
-            if(sizes[i] <= 100) {
+
                 fw.write(testing.test(iterate, sizes[i])+"\n");
-            }
+
         }
 
 
@@ -44,9 +44,9 @@ public class Performance {
         fw.write("\n Sorting algorithm - Selection sort \n");
         testing = new Tester(selection);
         for(int i=0; i<sizes.length; i++){
-            if(sizes[i] <= 100) {
+
                 fw.write(testing.test(iterate, sizes[i])+"\n");
-            }
+
         }
 
 

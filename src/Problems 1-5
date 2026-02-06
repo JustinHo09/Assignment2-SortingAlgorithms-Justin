@@ -434,6 +434,7 @@ Problem 5:
         1. Merge Sort
         2. Quick sort, Shell sort, Selection Sort, Insertion Sort, and Bubble Sort.(tied)
 
+
         The reason quick, shell, selection, insertion, and bubble sort are all tied is because
         they all have the same worst time complexity of O(n^2). Since they all have the same
         worst case time complexity, in theory they should all have a very similar runtime
@@ -444,5 +445,6 @@ Problem 5:
         runtime of algorithms with O(n^2) complexity will be high than that of O(nlogn).
         Since O(n^2) would have a longer runtime than O(nlogn), merge sort will be faster than
         the other sorting algorithms, which is why its ranked first above thee rest.
+
 
 

@@ -1,0 +1,67 @@
+Sorting Algorithm Report 
+
+ Sorting algorithm - Bubble sort 
+Sorted 10-Sorted data of: 100 elements in 0.17019835 ms(average)
+Sorted 10-Sorted data of: 500 elements in 0.93704175 ms(average)
+Sorted 10-Sorted data of: 1000 elements in 0.4795286999999999 ms(average)
+Sorted 10-Sorted data of: 2000 elements in 1.0480697 ms(average)
+Sorted 10-Sorted data of: 5000 elements in 6.512055600000001 ms(average)
+Sorted 10-Sorted data of: 10000 elements in 42.68249855 ms(average)
+Sorted 10-Sorted data of: 20000 elements in 85.21331165000001 ms(average)
+Sorted 10-Sorted data of: 75000 elements in 1164.72275095 ms(average)
+Sorted 10-Sorted data of: 150000 elements in 4680.2202775999995 ms(average)
+
+ Sorting algorithm - Insertion sort 
+Sorted 10-Sorted data of: 100 elements in 0.05026945000000001 ms(average)
+Sorted 10-Sorted data of: 500 elements in 0.16550845 ms(average)
+Sorted 10-Sorted data of: 1000 elements in 0.1549576 ms(average)
+Sorted 10-Sorted data of: 2000 elements in 0.38077415000000003 ms(average)
+Sorted 10-Sorted data of: 5000 elements in 1.04752865 ms(average)
+Sorted 10-Sorted data of: 10000 elements in 2.66156375 ms(average)
+Sorted 10-Sorted data of: 20000 elements in 7.102331599999999 ms(average)
+Sorted 10-Sorted data of: 75000 elements in 55.556594800000006 ms(average)
+Sorted 10-Sorted data of: 150000 elements in 153.98503855000007 ms(average)
+
+ Sorting algorithm - Selection sort 
+Sorted 10-Sorted data of: 100 elements in 0.09097374999999999 ms(average)
+Sorted 10-Sorted data of: 500 elements in 0.3630819500000001 ms(average)
+Sorted 10-Sorted data of: 1000 elements in 0.36720685 ms(average)
+Sorted 10-Sorted data of: 2000 elements in 1.2589263499999996 ms(average)
+Sorted 10-Sorted data of: 5000 elements in 7.1188148 ms(average)
+Sorted 10-Sorted data of: 10000 elements in 27.552927850000003 ms(average)
+Sorted 10-Sorted data of: 20000 elements in 108.99557570000002 ms(average)
+Sorted 10-Sorted data of: 75000 elements in 1519.25817015 ms(average)
+Sorted 10-Sorted data of: 150000 elements in 6200.375126899999 ms(average)
+
+ Sorting algorithm - Shell sort 
+Sorted 10-Sorted data of: 100 elements in 0.038038249999999996 ms(average)
+Sorted 10-Sorted data of: 500 elements in 0.05942780000000002 ms(average)
+Sorted 10-Sorted data of: 1000 elements in 0.062404100000000004 ms(average)
+Sorted 10-Sorted data of: 2000 elements in 0.1183379 ms(average)
+Sorted 10-Sorted data of: 5000 elements in 0.26624995 ms(average)
+Sorted 10-Sorted data of: 10000 elements in 0.50390285 ms(average)
+Sorted 10-Sorted data of: 20000 elements in 1.1257131999999999 ms(average)
+Sorted 10-Sorted data of: 75000 elements in 4.401808300000001 ms(average)
+Sorted 10-Sorted data of: 150000 elements in 9.58592755 ms(average)
+
+ Sorting algorithm - Quick sort 
+Sorted 10-Sorted data of: 100 elements in 0.04467354999999999 ms(average)
+Sorted 10-Sorted data of: 500 elements in 0.06593825 ms(average)
+Sorted 10-Sorted data of: 1000 elements in 0.1207298 ms(average)
+Sorted 10-Sorted data of: 2000 elements in 0.6840319000000001 ms(average)
+Sorted 10-Sorted data of: 5000 elements in 0.57514995 ms(average)
+Sorted 10-Sorted data of: 10000 elements in 0.7523291499999999 ms(average)
+Sorted 10-Sorted data of: 20000 elements in 1.6483036499999997 ms(average)
+Sorted 10-Sorted data of: 75000 elements in 7.81398775 ms(average)
+Sorted 10-Sorted data of: 150000 elements in 17.59221245 ms(average)
+
+ Sorting algorithm - Merge sort 
+Sorted 10-Sorted data of: 100 elements in 0.04603145 ms(average)
+Sorted 10-Sorted data of: 500 elements in 0.0769344 ms(average)
+Sorted 10-Sorted data of: 1000 elements in 0.16383489999999998 ms(average)
+Sorted 10-Sorted data of: 2000 elements in 0.38559734999999995 ms(average)
+Sorted 10-Sorted data of: 5000 elements in 1.3353670000000002 ms(average)
+Sorted 10-Sorted data of: 10000 elements in 2.2326234499999997 ms(average)
+Sorted 10-Sorted data of: 20000 elements in 2.9179852 ms(average)
+Sorted 10-Sorted data of: 75000 elements in 10.16485525 ms(average)
+Sorted 10-Sorted data of: 150000 elements in 18.897956399999998 ms(average)
